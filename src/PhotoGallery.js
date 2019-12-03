@@ -55,17 +55,22 @@ export function PhotoGallery() {
       image: 'http://img.tukexw.com/img/5a6b15a029ee91bc.jpg',
     },
   ]
-
-  function handleAmplify(e) {}
+  const [click, setClick] = useState(false)
+  function handleAmplify(id) {
+    setClick(id)
+    if (id === click) {
+      setClick(null)
+    }
+  }
   return (
     <div className="wrapper">
       {images.map(item => (
         <img
-          className="images"
+          className={click === item.id ? 'bigImages' : 'images'}
           src={item.image}
           title={item.name}
           key={item.id}
-          onClick={handleAmplify}
+          onClick={() => handleAmplify(item.id)}
         />
       ))}
     </div>

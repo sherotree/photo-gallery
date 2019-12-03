@@ -1,13 +1,23 @@
 .wrapper {
   margin: 100px auto;
   display: flex;
+  flex-wrap: wrap;
   width: 600px;
+  position: relative;
 }
 
 .images {
   display: flex;
-  flex-wrap: wrap;
   width: 150px;
-  margin: 20px 20px;
-  height: 200px;
+  margin: 10px 10px;
+  height: 180px;
+}
+
+.bigImages {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  box-shadow: 0 0 20px yellowgreen;
+  position: absolute;
+  z-index: 900;
 }
