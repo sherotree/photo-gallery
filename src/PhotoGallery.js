@@ -58,16 +58,18 @@ export function PhotoGallery() {
     },
   ]
   function Show(props) {
-    let showItem = []
-    showItem = images.map(item => (
-      <img
-        className="images"
-        src={item.image}
-        title={item.name}
-        key={item.id}
-      />
-    ))
-    return <div>{showItem}</div>
+    return (
+      <div>
+        {images.map(item => (
+          <img
+            className="images"
+            src={item.image}
+            title={item.name}
+            key={item.id}
+          />
+        ))}
+      </div>
+    )
   }
   return (
     <div className="wrapper">
