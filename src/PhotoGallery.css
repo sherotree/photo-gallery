@@ -1,9 +1,13 @@
 .wrapper {
   margin: 100px auto;
   display: flex;
+  width: 600px;
 }
 
 .images {
+  display: flex;
+  flex-wrap: wrap;
   width: 150px;
+  margin: 20px 20px;
   height: 200px;
 }
